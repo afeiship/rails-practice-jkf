@@ -17,6 +17,10 @@ module RailsPracticeJkf
     #I18n.config.enforce_available_locales = true
     config.i18n.default_locale = (ENV['LOCALE'] || 'zh-CN').to_sym
     config.time_zone = 'Beijing'
+
+    ## password filter:
+    config.action_controller.action_on_unpermitted_parameters = :log
+    config.filter_parameters += [ :password ]
     
     # generators config:
     # config.generators.assets = false

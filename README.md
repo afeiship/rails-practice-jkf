@@ -16,9 +16,10 @@ get 'contact=>pages#contact'
 
 + sanfocad:
 ```bash
-rl-gs news title:string content:text
-rl-gs works title:string desc:string image:string
-rl-gs links title:string image:string link:string
+rl-gs admin/news title:string content:text
+rl-gs admin/works title:string desc:string image:string
+rl-gs admin/links title:string image:string link:string
+
 rails db:migrate
 
 rl-gc pages index about news works contact
@@ -29,6 +30,13 @@ rl-gc pages index about news works contact
 + news  (新闻中心)
 + works (作品)
 + links (友情链接)
+
+## mock admin:
+```bash
+## add this to your env profile:
+export ADMIN_USER='admin';
+export ADMIN_PASSWORD='test';
+```
 
 ## resources:
 + http://www.jkf.cn/

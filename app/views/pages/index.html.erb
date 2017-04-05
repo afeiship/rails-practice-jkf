@@ -1,2 +1,11 @@
 <h1>Pages#首页</h1>
 <p>Find me in app/views/pages/index.html.erb</p>
+
+
+<nav>
+    <ul>
+    <% @news.each do |item| %>
+        <li><%= item.title %></li>
+    <% end %>
+    </ul>
+</nav>

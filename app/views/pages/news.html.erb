@@ -1,2 +1,13 @@
 <h1>Pages#新闻中心</h1>
-<p>Find me in app/views/pages/news.html.erb</p>
+<nav class="news_list">
+    <ul>
+    <% @news.each do |item| %>
+        <li>
+        <span class="right">
+            <%= item.created_at %>
+        </span>
+        <%= item.title %>
+        </li>
+    <% end %>
+    </ul>
+</nav>

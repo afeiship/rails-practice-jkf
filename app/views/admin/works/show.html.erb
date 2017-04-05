@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @admin_work.title %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @admin_work.desc %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @admin_work.image %>
+</p>
+
+<%= link_to 'Edit', edit_admin_work_path(@admin_work) %> |
+<%= link_to 'Back', admin_works_path %>

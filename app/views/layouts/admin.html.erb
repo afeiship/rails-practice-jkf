@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsPracticeJkf-ADMIN</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="global-nav">
+        <div class="left">Admin Logo</div>
+        <div class="right">
+            <% if admin_username %>
+                <%= admin_username %>
+                 <%= link_to 'Logout', admin_sessions_destroy_path,
+                    method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% else %>
+                <a href="/admin/sessions/new">Login</a>
+            <% end %>
+        </div>
+    </div>
+
+
+    <% if flash[:notice] %>
+        <div class="my-notice"><%= flash[:notice] %></div>
+    <% end %>
+
+
+    <% if flash[:alert] %>
+        <div class="my-alert"><%= flash[:alert] %></div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

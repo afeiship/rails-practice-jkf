@@ -1,0 +1,32 @@
+<%= form_for(admin_work) do |f| %>
+  <% if admin_work.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin_work.errors.count, "error") %> prohibited this admin_work from being saved:</h2>
+
+      <ul>
+      <% admin_work.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :desc %>
+    <%= f.text_field :desc %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
