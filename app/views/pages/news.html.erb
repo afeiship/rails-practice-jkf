@@ -3,10 +3,12 @@
     <ul>
     <% @news.each do |item| %>
         <li>
-        <span class="right">
-            <%= item.created_at %>
-        </span>
-        <%= item.title %>
+            <a href="/news_detail/<%= item.id %>">
+                <span class="right">
+                    <%= item.created_at %>
+                </span>
+                <%= item.title %>
+            </a>
         </li>
     <% end %>
     </ul>

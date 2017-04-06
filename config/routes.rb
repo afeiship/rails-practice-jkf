@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/news', to: 'pages#news'
   get '/works', to: 'pages#works'
   get '/contact', to: 'pages#contact'
+  get '/news_detail/:id', to:'pages#news_detail'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :admin do

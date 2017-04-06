@@ -1,0 +1,20 @@
+.news_detail{
+    .hd{
+        padding:10px;
+        font-size: 16px;
+        text-align: center;
+        >.hd{
+            font-size: 18px;
+        }
+        >.bd{
+            font-size: 12px;
+            color:#999;
+        }
+    }
+
+    .desc{
+        padding:20px;
+        line-height: 22px;
+        text-indent: 2em;
+    }
+}

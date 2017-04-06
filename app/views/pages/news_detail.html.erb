@@ -1,0 +1,14 @@
+<div class="news_detail">
+<div class="hd">
+    <div class="hd"><%= @news_detail.title %></div>
+    <div class="bd">
+    发表时间： <%= format_time @news_detail.created_at%>
+    </div>
+</div>
+
+
+<div class="desc">
+<%= @news_detail.content %>
+</div>
+
+</div>
