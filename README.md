@@ -41,3 +41,5 @@ export ADMIN_PASSWORD='test';
 ## resources:
 + http://www.jkf.cn/
 + https://github.com/windy/wblog
++ http://www.cnblogs.com/yanmiao/archive/2011/09/26/2191306.html
+
