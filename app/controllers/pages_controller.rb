@@ -16,6 +16,7 @@ class PagesController < ApplicationController
   end
 
   def works
+    @works = Admin::Link.all
   end
 
   def contact

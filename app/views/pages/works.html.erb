@@ -1,2 +1,13 @@
-<h1>Pages#客户安利</h1>
-<p>Find me in app/views/pages/works.html.erb</p>
+<div class="works">
+
+<h1>Pages#客户安利123</h1>
+<ul>
+    <% @works.each do |item|%>
+    <li>
+        <p><%= item.title %></p>
+        <p><img width="120" height="30" src="<%= item.image%>" alt=""></p>
+    </li>
+    <% end %>
+</ul>
+
+</div>

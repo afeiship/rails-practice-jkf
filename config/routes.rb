@@ -11,9 +11,9 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :admin do
-    resources :news, :only=>[:new, :create, :index ,:show,:edit, :update]
-    resources :works, :only=>[:new, :create,:index, :show,:edit, :update]
-    resources :links, :only=>[:new, :create, :index, :show,:edit, :update]
+    resources :news
+    resources :works
+    resources :links
     get 'sessions/new'
     post 'sessions/create', to: 'sessions#create'
     delete 'sessions/destroy',to: 'sessions#destroy'

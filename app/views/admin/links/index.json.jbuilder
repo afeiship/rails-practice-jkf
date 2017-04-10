@@ -1,1 +1,1 @@
-json.array! @admin_links, partial: 'admin_links/admin_link', as: :admin_link
+json.array! @admin_links, partial: 'admin/links/admin_link', as: :admin_link

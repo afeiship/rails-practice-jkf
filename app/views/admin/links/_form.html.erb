@@ -18,7 +18,12 @@
 
   <div class="field">
     <%= f.label :image %>
-    <%= f.text_field :image %>
+    <%= f.file_field :image %>
+
+
+    <% if f.object.image? %>
+        <%= image_tag f.object.image.thumb.url %>
+    <% end %>
   </div>
 
   <div class="field">

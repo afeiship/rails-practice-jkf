@@ -1,1 +1,1 @@
-json.partial! "admin_links/admin_link", admin_link: @admin_link
+json.partial! "admin/links/admin_link", admin_link: @admin_link
