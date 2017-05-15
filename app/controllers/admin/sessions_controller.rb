@@ -5,7 +5,6 @@ class Admin::SessionsController < ApplicationController
   end
 
   def create
-    p ENV;
     if ENV['ADMIN_USER'].blank?
       flash.now[:alert] = t('admin.session.no_configuration')
       render :new
