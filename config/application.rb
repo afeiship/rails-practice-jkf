@@ -23,10 +23,10 @@ module RailsPracticeJkf
     config.filter_parameters += [ :password ]
     
     # generators config:
-    # config.generators.assets = false
-    config.generators.helper = false
-    config.generators do |g|
-      g.test_framework :rspec, view_specs: false
+    config.generators do |generator|
+      generator.test_framework false
+      generator.helper false
+      generator.assets false
     end
 
   end
