@@ -3,26 +3,26 @@ class ApplicationController < ActionController::Base
 
   helper_method :format_time, :format_date
 
-  helper_method :admin_username
-
-  def format_time(time)
-    time.strftime("%Y-%m-%d %H:%M")
-  end
-
-  def format_date(time)
-    time.strftime("%Y.%m.%d")
+  def api_error(opts = {})
+    render head: :unauthorized, status: opts[:status]
   end
 
   protected
-  def authericate_user!
-    if ! session[:login]
-      flash[:error] = '请先登录后台管理'
-      cookies[:urlback] = request.original_url
-      redirect_to admin_sessions_new_path
+  def login?
+    auth=request.headers[:Authorization]
+    if !!auth
+      user = User.find_by_auth_token auth
+      if user
+        session[:current] = user
+      else
+        render :json => {
+            data: nil, code: 403
+        }
+      end
+    else
+      redirect_to :login
     end
   end
 
-  def admin_username
-    session[:login] && ENV['ADMIN_USER']
-  end
+
 end

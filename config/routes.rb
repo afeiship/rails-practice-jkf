@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-  root :to => 'pages#index'
-
-  # get '/index', to: 'pages#index'
+  root :to => 'pages#login'
+  get '/login', to: 'pages#login'
   # get '/about', to: 'pages#about'
   # get '/news', to: 'pages#news'
   # get '/works', to: 'pages#works'
@@ -10,16 +9,5 @@ Rails.application.routes.draw do
   # get '/news_detail/:id', to:'pages#news_detail'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  namespace :admin do
-    resources :users
-    # resources :news
-    # resources :works
-    # resources :links
-    # get 'sessions/new'
-    # post 'sessions/create', to: 'sessions#create'
-    # delete 'sessions/destroy',to: 'sessions#destroy'
-    # root 'dashboard#index'
-  end
-
-  
+  resources :users
 end
